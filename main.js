@@ -4,6 +4,8 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
+require('electron-reload')(__dirname + '/public/js');
+
 const path = require('path')
 const url = require('url')
 
@@ -17,7 +19,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, '/public/index.html'),
     protocol: 'file:',
     slashes: true
   }))

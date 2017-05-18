@@ -1,22 +1,25 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-project-1",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "electron project 1 crypto widget",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "development": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "repository": "https://github.com/sasankh/electron-project-1",
+  "keywords": [],
+  "author": "Sasankh BC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "electron-reload": "^1.1.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "watchify": "^3.9.0"
   }
 }
